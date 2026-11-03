@@ -7,6 +7,7 @@
 | 技能 | 用途 | 入口 |
 | --- | --- | --- |
 | IMA拉取入库前 | 把 IMA 等来源的语音转写整理成结构化纪要卡片，提取记录信息、主题和待办；缺失字段由用户确认 | [ima-transcript-cards](./skills/ima-transcript-cards/SKILL.md) |
+| ima-to-obsidian | 从 IMA 知识库反向同步条目到 Obsidian vault 落盘成 markdown，含增量判定、敏感拦截、IMA 回链生成 | [ima-to-obsidian](./skills/ima-to-obsidian/SKILL.md) |
 
 ## 仓库结构
 
@@ -14,22 +15,29 @@
 ima-obsidian/
 ├── README.md
 └── skills/
-    └── ima-transcript-cards/
+    ├── ima-transcript-cards/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       └── ttm.py
+    └── ima-to-obsidian/
         ├── SKILL.md
+        ├── config.json
         └── scripts/
-            └── ttm.py
+            ├── ima_mcp_direct.py
+            └── ima_to_obsidian.py
 ```
 
 ## 使用方式
 
 1. 打开上方技能入口，阅读适用范围与执行步骤。
-2. 安装工具支持从 GitHub 子目录安装时，选择 `skills/ima-transcript-cards`；手动安装时，将该目录整体复制到所用 AI 工具的技能目录。
+2. 安装工具支持从 GitHub 子目录安装时，选择对应 `skills/<技能目录>`；手动安装时，将该目录整体复制到所用 AI 工具的技能目录。
 3. 根据本机环境设置 Python 和 Obsidian 库路径。当前技能示例使用 `D:/OB`，目录约定见技能说明。
 
 从仓库根目录检查脚本命令：
 
 ```text
 python skills/ima-transcript-cards/scripts/ttm.py --help
+python skills/ima-to-obsidian/scripts/ima_to_obsidian.py --help
 ```
 
 ## 添加技能

@@ -1,0 +1,16 @@
+{
+  "vault_path": "D:/OB",
+  "ima": {
+    "default_kb_id": "ima_kb_sKpjKAEk",
+    "default_kb_name": "Obsidian-codex"
+  },
+  "landing": {
+    "dir": "01-Raw/1-我的文章/1-1来自IMA",
+    "note": "拉取IMA的文件统一保存到 01-Raw/1-我的文章/1-1来自IMA（2026-10-30 用户指定）。用独立子目录收纳，与 1-我的文章/ 根目录下的原创稿区分开"
+  },
+  "rules": {
+    "block_sensitive": true,
+    "include_intro_fallback": true,
+    "overwrite_local_edit": false
+  }
+}
