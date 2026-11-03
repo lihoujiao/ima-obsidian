@@ -59,9 +59,11 @@ IMA（和各类录音设备）拉回来的语音转写是**一坨口语连读文
 
 ### 第 1 步：扫描
 
+以下命令从本仓库根目录运行；若已安装到 AI 工具的技能目录，将 `S` 改为安装目录下 `scripts/ttm.py` 的实际路径。`PY` 和库路径按本机环境调整。
+
 ```bash
 PY="C:/Users/Administrator/.workbuddy/binaries/python/envs/default/Scripts/python.exe"
-S="C:/Users/Administrator/.workbuddy/skills/IMA拉取入库前/scripts/ttm.py"
+S="skills/ima-transcript-cards/scripts/ttm.py"
 
 "$PY" "$S" scan --vault "D:/OB" --json "D:/OB/01-Raw/.workbuddy/tmp/ttm_scan.json"
 ```
